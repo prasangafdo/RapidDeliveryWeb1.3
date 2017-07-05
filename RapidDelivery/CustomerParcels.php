@@ -1,23 +1,10 @@
 <?php
 require 'connect.php';
-$addr = $_POST['address'];
+$name = $_POST['name'];
 
 
-
-/*$sql1 = "SELECT `pickup_address` FROM `parcel` WHERE `username` = '$pickup_address'";
-$result = $con->query($sql1);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-		
-		$addr = $row["pickup_address"];
-        echo  $addr ;
-      */  //
-//}
-//}
 $sql = "SELECT ID, pickup_address, delivery_address, package_type, contact_no, state_address FROM
-parcel where pickup_address like '$addr'";
+parcel where customer_id like '$name'";
 //0 is for no parcels
 if (mysqli_query($con, $sql)) {
     
@@ -57,7 +44,5 @@ echo "</table>";
 ?>
 <html>
 <body>
-<input type="text">
-<input type="submit">
 </body>
 </html>

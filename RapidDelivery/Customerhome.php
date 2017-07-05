@@ -160,7 +160,12 @@ Additionally, other than giving features to the employees, Rapid Delivery has be
                     <h1>Tracking</h1>
                      </div>
              </div>
-               
+             <form action="CustomerParcels.php" method="post">
+             <input type="text" name="name" placeholder="Customer ID">
+             <input type="submit">
+             </form>
+             
+        <!--       
        <div class="map-Border">
         <div id="map"></div>
     <script>

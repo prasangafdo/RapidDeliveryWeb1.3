@@ -2,7 +2,7 @@
 include('loginCustomer.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
-header("location: home.php");
+header("location: Customerhome.php");
 }
 ?>
 <!DOCTYPE html>
