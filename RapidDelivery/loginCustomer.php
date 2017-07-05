@@ -17,9 +17,9 @@ $password = stripslashes($password);
 $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);*/
 // Selecting Database
-$db = mysql_select_db("company", $connection);
+$db = mysql_select_db("rapiddeliverynew", $connection);
 // SQL query to fetch information of registerd users and finds user match.
-$query = mysql_query("select * from admin where password='$password' AND username='$username'", $connection);//Query need to be edited
+$query = mysql_query("select * from customer where password='$password' AND username='$username'", $connection);//Query need to be edited
 $rows = mysql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session

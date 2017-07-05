@@ -2,7 +2,7 @@
 include('loginAdmin.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
-header("location: home.php");
+header("location: adminhome.php");//Rederecting to admin's 
 }
 ?>
 <!DOCTYPE html>

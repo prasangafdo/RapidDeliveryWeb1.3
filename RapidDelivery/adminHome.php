@@ -77,9 +77,10 @@
                 <ul>
                 <div class="userName">
                 
-					<?php
-                    include('customerSession.php');
+					<?php 
+                    include('adminSession.php');
                     echo "<h3> $login_session </h3>";
+					
                     ?>
 
                     

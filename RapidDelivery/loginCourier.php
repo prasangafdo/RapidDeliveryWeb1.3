@@ -17,16 +17,16 @@ $password = stripslashes($password);
 $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);*/
 // Selecting Database
-$db = mysql_select_db("company", $connection);
+$db = mysql_select_db("rapiddeliverynew", $connection);
 // SQL query to fetch information of registerd users and finds user match.
-$query = mysql_query("select * from admin where password='$password' AND username='$username'", $connection);//Query needs editing
+$query = mysql_query("select * from courier where password='$password' AND username='$username'", $connection);//Query needs editing
 $rows = mysql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session
 
 extract($data);
 
-header("location: Courierhome.php"); // Redirecting To Other Page
+header("location: courierhome.php"); // Redirecting To Other Page
 } else {
 $error = "Username or Password is invalid";
 }
